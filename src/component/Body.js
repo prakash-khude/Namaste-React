@@ -3,9 +3,15 @@ import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Body = () => {
 
     const[searchText,setSearchText] = useState("");
+
+    const onlineStatus = useOnlineStatus();
+
+
 
     const[filteredRestaurant,setFilteredRestaurant] = useState([{
         data:{
@@ -86,6 +92,8 @@ const Body = () => {
     if(listOfRestaurant.length === 0){
         return (<Shimmer/>);
     }
+
+    if(onlineStatus=== false) return <h1>Internet is down.</h1>;
 
     return (
         <div className="body">
