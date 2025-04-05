@@ -2,7 +2,7 @@ import { Suspense, useEffect } from "react";
 
 const Contact = () => {
 
-    useEffect(()=>{
+    /*useEffect(()=>{
         const timer = setInterval(()=>{
             console.log("start interval")
         },1000)
@@ -37,12 +37,19 @@ const Contact = () => {
     function AsyncDataComponent({data}){
         return <div>{data}</div>
     }
-
+*/
     return (
         <div>
-            <h1>Contact us</h1>
-            <h2>This is contact us page.</h2>
-            <h3>{DataFetchingComponent()}</h3>
+            <h1 className="font-bold text-3xl p-4 m-4">Contact us</h1>
+            <form>
+                <input type="text" className="border border-black p-2 m-2" placeholder="name"/>
+                
+                <input type="text" className="border border-black p-2 m-2" placeholder="message"/>
+
+                <button className="border border-black p-2 m-2 bg-gray-50 rounded-lg">Submit</button>
+            </form>
+                   
+
         </div>
     );
 };
