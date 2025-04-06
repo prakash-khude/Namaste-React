@@ -3,7 +3,7 @@ const RestaurantCard = (props) => {
     const {resData} = props;
     const {restaurantName,cuisine,avgRating,costForTwo} = resData?.data;
     return (
-    <div className="m-4 p-4 w-[200px] rounded-lg hover:bg-amber-400">
+    <div data-testid="resCard" className="m-4 p-4 w-[200px] rounded-lg hover:bg-amber-400">
         <img className="restaurant-logo rounded-lg" src={LOGO_URL} alt="res-logo"/>
         <h3 className="font-bold py-1 text-lg capitalize">{restaurantName}</h3>
         <h4>{cuisine.join(",")}</h4>

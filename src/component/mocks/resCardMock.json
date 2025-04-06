@@ -1,0 +1,15 @@
+{
+    "data": {
+        "restaurantName": "test",
+        "type": "F",
+        "costForTwo": 4000,
+        "avgRating": "4.5",
+        "cuisine": [
+            "North India",
+            "fast food",
+            "Another food"
+        ],
+        "id": 1057448,
+        "promoted": true
+    }
+}
